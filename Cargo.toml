@@ -1,0 +1,17 @@
+[package]
+name = "jts-rust-svr"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[profile.release]
+opt-level = 3
+
+[dependencies]
+axum = { version = "0.5.10", features = ["ws", "headers"] }
+chrono = "0.4.22"
+headers = "0.3"
+tokio = { version = "1.0", features = ["full"] }
+rand = "0.8.5"
+tower-http = { version = "0.3.0", features = ["fs", "trace"] }
+bytes = "1"
